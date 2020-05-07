@@ -22,7 +22,7 @@ public class ItemList extends HttpServlet {
 	this.categoryDao = new CategoryDao();
 	List<Item> list = this.itemDao.selectItemListAll();
 	request.setAttribute("list", list);
-	request.getRequestDispatcher("/WEB-INF/jsp/itemList.jsp").forward(request, response);	
+	request.getRequestDispatcher("/WEB-INF/views/itemList.jsp").forward(request, response);	
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

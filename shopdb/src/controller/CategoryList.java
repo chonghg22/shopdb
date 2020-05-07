@@ -27,7 +27,7 @@ public class CategoryList extends HttpServlet {
 		System.out.println(list.size());
 		request.setAttribute("list", list);
 		//3)view 연결
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/jsp/categoryList.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/categoryList.jsp");
 		
 		rd.forward(request, response);
 		

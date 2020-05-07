@@ -25,7 +25,7 @@ public class InsertItem extends HttpServlet {
 	this.categoryDao = new CategoryDao();
 	List<Category> list = this.categoryDao.selectCategoryListAll();		
 	request.setAttribute("list", list);		
-	request.getRequestDispatcher("/WEB-INF/jsp/insertItem.jsp").forward(request, response);
+	request.getRequestDispatcher("/WEB-INF/views/insertItem.jsp").forward(request, response);
 	
 	}
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

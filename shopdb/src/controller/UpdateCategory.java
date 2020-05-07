@@ -29,7 +29,7 @@ public class UpdateCategory extends HttpServlet {
     	category = categoryDao.selectCategoryOne(categoryId);
     	request.setAttribute("c", category);
     	//view forward
-    	request.getRequestDispatcher("/WEB-INF/jsp/updateCategory.jsp").forward(request, response);
+    	request.getRequestDispatcher("/WEB-INF/views/updateCategory.jsp").forward(request, response);
     }
     //수정 액션 (c-m) ->리다이렉트
     //dopost에는 인코딩 받는 코드가 있어야함

@@ -15,7 +15,7 @@ public class InsertCategory extends HttpServlet{
 	//InsertCategory요청이 get방식일때 - > 입력폼을 보여줌 
 	@Override // controller - view 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException{
-		request.getRequestDispatcher("/WEB-INF/jsp/categoryList.jsp").forward(request, response);      
+		request.getRequestDispatcher("/WEB-INF/views/insertCategory.jsp").forward(request, response);      
 	}
 	//InsertCategory요청이 post방식일때 -> 입력 
 	@Override // controller - model

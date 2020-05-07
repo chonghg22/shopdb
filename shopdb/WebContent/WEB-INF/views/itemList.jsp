@@ -5,33 +5,36 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="/blog/css/listForm.css" rel="stylesheet" media="all">
 </head>
 <body>
+<div>		
+	<jsp:include page="/WEB-INF/views/inc/side.jsp"></jsp:include>
+	</div>
 	<h1>상품 목록</h1>
 	<a href = "${pageContext.request.contextPath}/InsertItem">상품입력</a>
 	<c:if test= "${list == null }">
 		상품이 없습니다.
 	</c:if>
 	<c:if test = "${list !=null }">
-		<table border = "1">
+		<table>
 			<thead>
 				<tr>
-					<th>item_id</th>
-					<th>category_id</th>
-					<th>item_name</th>
-					<th>item_price</th>
-					<th>item_contents</th>
+					<th>itemId</th>
+					<th>categoryId</th>
+					<th>itemName</th>
+					<th>itemPrice</th>
+					<th>itemContents</th>
 				</tr>
 			</thead>
 			<tbody>
 				<c:forEach var="c" items="${list}">
 					<tr>
-						<td>${c.itemId}</td>
-						<td>${c.categoryId}</td>
-						<td>${c.itemName}</td>
-						<td>${c.itemPrice}</td>
-						<td>${c.itemContents}</td>
-					
+						<td data-column="itemId">${c.itemId}</td>
+						<td data-column="categoryId">${c.categoryId}</td>
+						<td data-column="itemName">${c.itemName}</td>
+						<td data-column="itemPrice">${c.itemPrice}</td>
+						<td data-column="itemContents">${c.itemContents}</td>					
 					</tr>
 				</c:forEach>	
 			</tbody>	
